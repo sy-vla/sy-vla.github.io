@@ -269,11 +269,16 @@
                       <sup>3</sup>Southern University of Science and Technology &nbsp;
                       <sup>4</sup>Tongji University
                     </span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Equal Contribution</small></span>
-                    <span class="eql-cntrb"><small><br><sup>†</sup>Corresponding Author</small></span>
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Equal Contribution &nbsp; <sup>†</sup>Corresponding Author</small></span>
                   </div>
 
                   <div class="column has-text-centered">
+                    <!-- Acceptance Banner -->
+                    <div class="acceptance-banner">
+                      <span class="acceptance-icon">🎉</span>
+                      <span>Accepted by ICML 2026</span>
+                    </div>
+
                     <div class="publication-links">
                       <!-- TODO: Update with your arXiv paper ID -->
                       <span class="link-block">
@@ -321,14 +326,11 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
+      <!-- TODO: Replace with your teaser image -->
+      <img src="static/images/teaser.svg" alt="Teaser figure" style="width:100%; border-radius: var(--border-radius-lg); box-shadow: var(--shadow-lg);">
       <!-- TODO: Replace with your video description -->
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        <!-- Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus.  -->
       </h2>
     </div>
   </div>
@@ -339,12 +341,12 @@
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <div class="column is-three-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <!-- TODO: Replace with your paper abstract -->
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Vision-Language-Action models face significant challenges in real-world deployment due to the entanglement of high-level reasoning with low-level control, and the instability of policy optimization. In this paper, we introduce SyVLA, a robust VLA model trained with diversified experiences. We propose an Intention Decoupling algorithm to isolate control-relevant features from reasoning contexts and a similar-sample guided RL pipeline to stabilize policy updates and mitigate distribution shift. Extensive experiments on real-world robotic tasks and multi-modal benchmarks demonstrate that SyVLA achieves superior task success rates and stronger out-of-distribution generalization compared to existing methods, while effectively preserving core vision-language capabilities.
           </p>
         </div>
       </div>
@@ -353,124 +355,174 @@
 </section>
 <!-- End paper abstract -->
 
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
+<!-- Paper Highlights -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered">Highlights</h2>
+        <div class="content">
+          <figure class="has-text-centered">
+            <img src="static/images/syvla.svg" alt="SyVLA architecture" style="max-width: 130%; margin-left: -15%; ">
+            <figcaption></figcaption>
+          </figure>
+          <p>
+            We propose <strong>SyVLA</strong>, a novel Vision-Language-Action (VLA) model that achieves a strong balance between robotic task competence and the preservation of general vision-language capabilities.
+          </p>
+          <p>
+            Recent SOTA VLA models remain limited by <strong>two fundamental challenges</strong>: (1) decoupling control intention from high-level reasoning, and (2) enabling stable real-world reinforcement learning to bridge the gap between imitation learning objectives and actual task success.
+          </p>
+          <p>
+            To tackle these challenges, we introduce an <strong>Intention Decoupling</strong> algorithm that gradient-masks control-irrelevant Feature Query Tokens, preventing the Action Expert from being misled by high-level reasoning information. We further develop a <strong>Similar-Sample Guided RL pipeline</strong>, which retrieves semantically similar expert trajectories to stabilize policy updates and mitigate policy collapse during real-world reinforcement learning.
+          </p>
+          <p>
+            Extensive experiments are conducted on <strong>three challenging real-world tasks</strong> (folding shirts under location change, solving arithmetic instructions while wrapping cubes, and bagging snacks with vague natural language commands) as well as on <strong>multiple multi-modal benchmarks</strong>. Remarkably, SyVLA achieves the highest average success rates in both in-domain and out-of-distribution settings, using <strong>less than 5%</strong> of the pretraining data of prior industrial models. At the same time, it preserves strong vision-language reasoning and significantly outperforms other VLA models on visual question answering benchmarks.
+          </p>
+          <p>
+            Overall, this work demonstrates that with careful architectural design and stable RL integration, VLA models can excel simultaneously at dexterous manipulation and general-purpose multimodal understanding — a substantial step toward open, generalizable embodied intelligence.
+          </p>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End youtube video -->
+<!-- End paper highlights -->
 
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
+<!-- Main results table -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Real-World Robot Results</h2>
+    <div class="table-container">
+      <table class="table is-bordered is-striped is-hoverable is-fullwidth has-text-centered">
+        <thead>
+          <tr>
+            <th rowspan="2" style="vertical-align: middle;">Method</th>
+            <th colspan="4">In Domain</th>
+            <th colspan="4">Out of Distribution</th>
+          </tr>
+          <tr>
+            <th>Task 1</th><th>Task 2</th><th>Task 3</th><th>Avg. Success Rate</th>
+            <th>Task 1</th><th>Task 2</th><th>Task 3</th><th>Avg. Success Rate</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>OpenVLA-oft</td>
+            <td>0.71</td><td>0.29</td><td>0.36</td><td>0.45</td>
+            <td>0.55</td><td>0.11</td><td>0.07</td><td>0.24</td>
+          </tr>
+          <tr>
+            <td>GR00T</td>
+            <td>0.71</td><td>0.21</td><td>0.21</td><td>0.38</td>
+            <td>0.64</td><td>0.07</td><td>0.00</td><td>0.24</td>
+          </tr>
+          <tr>
+            <td>Wall-Oss</td>
+            <td>0.50</td><td>0.18</td><td>0.14</td><td>0.27</td>
+            <td>0.14</td><td>0.04</td><td>0.00</td><td>0.06</td>
+          </tr>
+          <tr>
+            <td>Pi0 (pretrained)</td>
+            <td><strong>0.93</strong></td><td>0.39</td><td>0.57</td><td>0.63</td>
+            <td><strong>0.78</strong></td><td>0.29</td><td>0.36</td><td>0.48</td>
+          </tr>
+          <tr>
+            <td>Pi0 (from scratch)</td>
+            <td>0.64</td><td>0.21</td><td>0.29</td><td>0.38</td>
+            <td>0.50</td><td>0.14</td><td>0.14</td><td>0.26</td>
+          </tr>
+          <tr>
+            <td>ChatVLA</td>
+            <td>0.21</td><td>0.29</td><td>0.14</td><td>0.21</td>
+            <td>0.00</td><td>0.21</td><td>0.07</td><td>0.09</td>
+          </tr>
+          <tr>
+            <td><strong>SyVLA (ours)</strong></td>
+            <td>0.86</td><td><strong>0.68</strong></td><td><strong>0.64</strong></td><td><strong>0.73</strong></td>
+            <td><strong>0.78</strong></td><td><strong>0.57</strong></td><td><strong>0.57</strong></td><td><strong>0.64</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="has-text-centered has-text-grey" style="margin-top: 0.5rem;">
+      <strong>Results on real world tasks.</strong> We evaluate multiple models under both In Domain and OoD settings. The experimental results show that our SyVLA significantly outperforms other strong baselines and exhibits better generalization ability.
+    </p>
+  </div>
+</section>
+<!-- End main results table -->
+
+
+<!-- Multi-modal benchmarks table -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Multi-modal Benchmarks</h2>
+    <div class="columns is-vcentered">
+      <div class="column is-two-thirds">
+        <div class="table-container">
+          <table class="table is-bordered is-striped is-hoverable is-fullwidth has-text-centered">
+            <thead>
+              <tr>
+                <th></th>
+                <th>DocVQA</th><th>AI2D</th><th>MMMU</th><th>MME</th><th>HallBench</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>OpenVLA-oft</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+              <tr><td>Wall-Oss</td><td>63.62</td><td>58.60</td><td>37.11</td><td>1146.56</td><td>36.57</td></tr>
+              <tr><td>GR00T</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+              <tr><td>Pi0</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+              <tr><td>ChatVLA</td><td><strong>83.30</strong></td><td><u>67.36</u></td><td><strong>37.40</strong></td><td><u>1435</u></td><td><u>39.90</u></td></tr>
+              <tr><td><strong>Ours</strong></td><td><u>80.01</u></td><td><strong>67.70</strong></td><td><u>35.78</u></td><td><strong>1795</strong></td><td><strong>42.53</strong></td></tr>
+            </tbody>
+          </table>
         </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
+      </div>
+      <div class="column is-one-third">
+        <figure class="has-text-centered">
+          <img src="static/images/vqa.svg" alt="VQA example" style="width: 100%;">
+                  </figure>
+      </div>
+    </div>
+    <p class="has-text-centered has-text-grey" style="margin-top: 0.5rem;">
+      <strong>Multi‑modal benchmark results.</strong> Our SyVLA outperforms baselines in commonsense and fine‑grained visual understanding, while remaining comparable on document and multidisciplinary knowledge. A dash (-) indicates no VQA capability.
+    </p>
+  </div>
+</section>
+<!-- End multi-modal benchmarks table -->
+
+
+<!-- Real-world robot videos -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Real-World Robot Demonstrations</h2>
+    <div class="columns is-centered">
+      <div class="column is-two-thirds has-text-centered">
+        <video controls muted loop preload="metadata" style="width: 100%; border-radius: var(--border-radius); box-shadow: var(--shadow-md);">
+          <source src="static/videos/task1.mp4" type="video/mp4">
+        </video>
+        <h3 class="subtitle is-5" style="margin-top: 0.75rem;">Task1: Folding Shirts (2×)</h3>
+      </div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 2rem;">
+      <div class="column is-two-thirds has-text-centered">
+        <video controls muted loop preload="metadata" style="width: 100%; border-radius: var(--border-radius); box-shadow: var(--shadow-md);">
+          <source src="static/videos/task2.mp4" type="video/mp4">
+        </video>
+        <h3 class="subtitle is-5" style="margin-top: 0.75rem;">Task2: Calculating & Wrapping (2×)</h3>
+      </div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 2rem;">
+      <div class="column is-two-thirds has-text-centered">
+        <video controls muted loop preload="metadata" style="width: 100%; border-radius: var(--border-radius); box-shadow: var(--shadow-md);">
+          <source src="static/videos/task3.mp4" type="video/mp4">
+        </video>
+        <h3 class="subtitle is-5" style="margin-top: 0.75rem;">Task3: Bagging Snacks (2×)</h3>
       </div>
     </div>
   </div>
 </section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
+<!-- End real-world robot videos -->
 
 
 <!--BibTex citation -->

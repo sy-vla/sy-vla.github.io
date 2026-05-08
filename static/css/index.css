@@ -113,6 +113,21 @@ body {
 }
 
 
+/* Acceptance Banner — red text, no background */
+.acceptance-banner {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #dc2626;
+  padding: 0.5rem 0;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+.acceptance-banner .acceptance-icon {
+  font-size: 1.25rem;
+}
+
 /* Publication Content Styling */
 .publication-title {
     font-family: 'Inter', sans-serif !important;
